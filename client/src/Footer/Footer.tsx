@@ -8,7 +8,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
   } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+  // import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { ReactNode } from 'react';
   
   const Logo = (props: any) => {
@@ -64,8 +64,8 @@ import {
   export default function SmallCentered() {
     return (
       <Box
-        bg={useColorModeValue('gray.50', 'gray.900')}
-        color={useColorModeValue('gray.700', 'gray.200')}>
+      // bgGradient='linear(to-r, teal.500, green.800)'
+              color={useColorModeValue('gray.700', 'gray.200')}>
         <Container
           as={Stack}
           maxW={'6xl'}
@@ -77,10 +77,11 @@ import {
          
           <Stack direction={'row'} spacing={40} 
             >
-            <Link href={'#'}>Home</Link>
-            <Link href={'#'}>About Us</Link>
-            <Link href={'#'}>Contact Us</Link>
-            <Link href={'#'}>Rules</Link>
+            <Link href={"/"}>Home</Link>
+            <Link href={"../login"}>Login</Link>
+            <Link href={"../page"}>About Us</Link>
+            <Link href={'/page/contact'}>Contact Us</Link>
+            <Link href={"../rules"}>Rules</Link>
           </Stack>
         </Container>
   
@@ -98,7 +99,7 @@ import {
             align={{ base: 'center', md: 'center' }}>
             <Text padding ={"5px"}>© Rentar All rights reserved</Text>
             <Stack direction={'row'} spacing={30}>
-              <SocialButton label={'Twitter'} href={'https://twitter.com/'}>
+              {/* <SocialButton label={'Twitter'} href={'https://twitter.com/'}>
                 <FaTwitter />
               </SocialButton>
               <SocialButton label={'YouTube'} href={'https://www.youtube.com/'}>
@@ -106,7 +107,7 @@ import {
               </SocialButton>
               <SocialButton label={'Instagram'} href={'https://www.instagram.com/'}>
                 <FaInstagram />
-              </SocialButton>
+              </SocialButton> */}
             </Stack>
           </Container>
         </Box>

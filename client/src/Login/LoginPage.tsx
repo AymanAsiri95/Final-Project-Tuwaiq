@@ -20,8 +20,9 @@ export default function SplitScreen() {
         <Stack spacing={4} w={'full'} maxW={'md'}>
           <Heading fontSize={'2xl'}>Sign in to your account</Heading>
           <FormControl id="username">
-            <FormLabel>UserName</FormLabel>
-            <Input type="username" />
+            <FormLabel>Username</FormLabel>
+            <Input 
+            type="text" />
           </FormControl>
           <FormControl id="password">
             <FormLabel>Password</FormLabel>
@@ -33,10 +34,15 @@ export default function SplitScreen() {
               align={'start'}
               justify={'space-between'}>
             </Stack>
-            <Button  colorScheme={'blue'} variant={'solid'}>
+            <Button  colorScheme={'blue'} variant={'solid'}
+            onClick={(e)=>{
+              navigate('/Building')
+            }}
+            >
               Login
+              
             </Button>
-            <p >don't have an account? you can register</p>
+            <p >don't have an ? register</p>
             <Button colorScheme={'blue'} variant={'solid'}
             onClick={(e)=>{
               navigate('/register')

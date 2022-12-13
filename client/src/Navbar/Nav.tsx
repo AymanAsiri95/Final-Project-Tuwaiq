@@ -1,78 +1,85 @@
-import * as React from 'react'
-import styled from 'styled-components'
+import { ReactNode } from 'react';
+import {
+  Box,
+  Flex,
+  Avatar,
+  HStack,
+  Link,
+  IconButton,
+  useDisclosure,
+  useColorModeValue,
+  Stack,
+} from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-const NavbarScroller = (props: {
-  brand: { name: string; to: string },
-  links: Array<{ name: string, to: string }>
-}) => {
-  const { brand, links } = props;
-  const NavLinks: any = () => links.map((link: { name: string, to: string }) => <Li key={link.name}><a href={link.to}>{link.name}</a></Li>);
+const Links = ['', 'Home', ' '];
+
+const NavLink = ({ children }: { children: ReactNode }) => (
+  <Link
+    px={2}
+    py={1}
+    rounded={'md'}
+    _hover={{
+      textDecoration: 'none',
+      bg: useColorModeValue('gray.200', 'gray.700'),
+    }}
+    href={'/'}>
+    {children}
+  </Link>
+  
+);
+
+
+export default function Simple() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
-    <Navbar>
-      <Brand href={brand.to}>{brand.name}</Brand>
-      <Ul>
-        <NavLinks />
-      </Ul>
-    </Navbar >
-  )
-};
+    <>
+      <Box bg={useColorModeValue('green.100', 'green.900')} px={4}>
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+          <IconButton
+            size={'md'}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={'Open Menu'}
+            display={{ md: 'none' }}
+            onClick={isOpen ? onClose : onOpen}
+          />
+          <HStack spacing={8} alignItems={'center'}>
+            {/* <Box>Rentar</Box> */}
+            <Box
+  as='button'
+  p={3}
+  color='white'
+  fontWeight='bold'
+  borderRadius='md'
+  bgGradient='linear(to-r, teal.500, green.500)'
+>
+      Rentar     
+</Box>
+            <HStack
+              as={'nav'}
+              spacing={4}
+              display={{ base: 'none', md: 'flex' }}>
+              {Links.map((link) => (
+                <NavLink key={link}>{link}</NavLink>
+              ))}
+            </HStack>
+          </HStack>
 
-const Theme = {
-  colors: {
-    bg: `#fff`,
-    dark: `#19811E`,
-    light: `#EEEEEE`,
-    red: `#ff5851`,
-  },
-  fonts: {
-    body: `IBM Plex Sans, sans-serif`,
-    heading: `IBM Plex Sans, sans-serif`,
-  }
+        </Flex>
+
+        {isOpen ? (
+          <Box pb={4} display={{ md: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
+              {Links.map((link) => (
+                <NavLink key={link}>{link}</NavLink>
+              ))}
+            </Stack>
+          </Box>
+        ) : null}
+      </Box>
+
+      
+    </>
+  );
 }
-
-const Navbar = styled.nav`
-  background: ${Theme.colors.dark};
-  font-family: ${Theme.fonts.heading};
-  color: ${Theme.colors.light};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  a { color: white; text-decoration: none; }`;
-
-const Brand = styled.a`
-  font-weight: bold;
-  font-style: italic;
-  margin-left: 0.5rem;
-  padding-right: 0.5rem;`;
-
-const Ul = styled.ul`
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: scroll;
-  `;
-
-const Li = styled.li`
-  flex: 0 0 auto;
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
-  -webkit-tap-highlight-color: transparent;
-  align-items: center;
-  color: #999;
-  height: 100%;
-  justify-content: center;
-  text-decoration: none;
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
-  -webkit-tap-highlight-color: transparent;
-  align-items: center;
-  color: #999;
-  display: flex;
-  font-size:15px;
-  height: 50px;
-  justify-content: center;
-  line-height: 16px;
-  margin: 0 1.125rem ;
-  text-decoration: none;
-  white-space: nowrap;`;
-
-export default NavbarScroller;
