@@ -5,7 +5,6 @@ import {
   Link,
   Image,
   Text,
-  
   HStack,
   Tag,
   Wrap,
@@ -14,7 +13,7 @@ import {
   useColorModeValue,
   Container,
 } from '@chakra-ui/react';
-
+import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 interface IBlogTags {
   tags: Array<string>;
   marginTop?: SpaceProps['marginTop'];
@@ -71,11 +70,13 @@ const Contact = () => {
             marginLeft={{ base: '0', sm: '5%' }}
             marginTop="5%">
             <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
-              {/* <Image
-                borderRadius="lg"
-                src="/go.gif" alt="hero-image"
-                objectFit="contain" shadow="dark-lg"
-              /> */}
+              <Image
+
+borderRadius='full'
+boxSize='400px'
+                src="../assets/con.gif" alt="hero-image"
+                // objectFit="contain" shadow="dark-lg"
+              />
             </Link>
           </Box>
           <Box zIndex="1" width="100%" position="absolute" height="100%">
@@ -121,16 +122,9 @@ Friday 2:00 PM - 10:00 PM          </Text >
 
         </Box>
       </Box>
-
-
       <Wrap spacing="30px" marginTop="5">
         <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
-          <Box w="100%">
- 
-
-         
-           
-          </Box>
+     
         </WrapItem>
       </Wrap>
 

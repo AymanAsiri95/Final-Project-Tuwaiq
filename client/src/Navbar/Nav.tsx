@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-const Links = ['', 'Home', ' '];
+const Links = [''];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -23,10 +23,12 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={'/'}>
-    {children}
+    href={'/'}
+    
+    
+    >
+       {children}
   </Link>
-  
 );
 
 
@@ -35,7 +37,7 @@ export default function Simple() {
 
   return (
     <>
-      <Box bg={useColorModeValue('green.100', 'green.900')} px={4}>
+      <Box  px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -47,16 +49,24 @@ export default function Simple() {
           <HStack spacing={8} alignItems={'center'}>
             {/* <Box>Rentar</Box> */}
             <Box
+  
   as='button'
   p={3}
-  color='black'
+  
+  color='white'
   fontWeight='bold'
   borderRadius='md'
   bgGradient='linear(to-r, teal.500, green.500)'
 >
       Rentar     
 </Box>
+<Link href={"/"}>Home</Link>
+<Link href={"/login"}>Login</Link>
+<Link href={"/building"}>Building</Link>
+<Link href={"/tenant"}>Tenant</Link>
+
             <HStack
+            
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>

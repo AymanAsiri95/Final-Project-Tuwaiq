@@ -73,7 +73,7 @@ const Rules = () => {
             <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
               <Image
                 borderRadius="lg"
-                src="../assets/go.gif" alt="hero-image"
+                src="../assets/bg.gif" alt="hero-image"
                 objectFit="contain" shadow="dark-lg"
               />
             </Link>
