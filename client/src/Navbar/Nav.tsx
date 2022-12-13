@@ -49,7 +49,7 @@ export default function Simple() {
             <Box
   as='button'
   p={3}
-  color='white'
+  color='black'
   fontWeight='bold'
   borderRadius='md'
   bgGradient='linear(to-r, teal.500, green.500)'
