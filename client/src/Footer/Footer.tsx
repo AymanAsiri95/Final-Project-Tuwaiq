@@ -65,7 +65,7 @@ import {
     return (
       <Box
       // bgGradient='linear(to-r, teal.500, green.800)'
-              color={useColorModeValue('gray.700', 'gray.200')}>
+              color={useColorModeValue('white', 'white')}>
         <Container
           as={Stack}
           maxW={'6xl'}
@@ -78,7 +78,6 @@ import {
           <Stack direction={'row'} spacing={40} 
             >
             <Link href={"/"}>Home</Link>
-            <Link href={"../login"}>Login</Link>
             <Link href={"../page"}>About Us</Link>
             <Link href={'/page/contact'}>Contact Us</Link>
             <Link href={"../rules"}>Rules</Link>
