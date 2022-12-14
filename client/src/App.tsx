@@ -15,6 +15,8 @@ import ProtectedRoute from "./Login/ProtectedRouter";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Buildinginfo from "./Building/Building";
 import Simple from "./Navbar/Nav";
+import Dashbord from "./dashbord/main";
+
 
 
 const navigation = {
@@ -37,6 +39,7 @@ function App() {
       <BrowserRouter>
        <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/dashbord" element={<Dashbord/>}/>
         <Route path="/Register" element={<Register/>}/>
         <Route path="/login"    element={<SplitScreen/>}/>
         <Route path="/Building" element={<Buildinginfo/>}/>
