@@ -1,13 +1,11 @@
 import * as React from "react";
 import Footer from "./Footer/Footer";
 import LoginFrom from "./Login/LoginPage";
-import NavbarScroller from "./Navbar/Nav";
 import Home from './home/home';
 import About from './page/about'
 import Contact from './page/contact/contact'
 import Rules from './rules/rules'
 import SplitScreen from './Login/LoginPage'
-
 // import Register from "./Register/Register";
 // import { Register } from "./Register/Register";
 import Register from "./Register/Register";
@@ -46,6 +44,7 @@ function App() {
         <Route path="/page" element={<About/>}/>
         <Route path="/page/contact" element={<Contact/>}/>
         <Route path="/rules" element={<Rules/>}/>
+
         {/* <Route el ement={<ProtectedRoute />}/> */}
           
        </Routes>

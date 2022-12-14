@@ -49,12 +49,7 @@ import {
         <Td >135000</Td>
         <Td >380000</Td>
       </Tr>
-      <Tr>
-        <Td>اجمالي الدخل</Td>
-        <Td></Td>
-        <Td color='red.500' >13500000</Td>
-        <Td ></Td>
-      </Tr>
+
     </Tbody>
 
   </Table>
