@@ -74,7 +74,7 @@ const Contact = () => {
 
 borderRadius='full'
 boxSize='400px'
-                src="../assets/con.gif" alt="hero-image"
+                src="../assets/con1.gif" alt="hero-image"
                 // objectFit="contain" shadow="dark-lg"
               />
             </Link>

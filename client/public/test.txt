@@ -1,0 +1,13 @@
+  style="
+      background: linear-gradient(
+          217deg,
+          rgba(0, 0, 0, 0),
+          rgb(0, 26, 30) 70.71%
+        ),
+        linear-gradient(
+          127deg,
+          rgb(255, 255, 255),
+          rgba(0, 223, 100, 0.53) 70.71%
+        ),
+        linear-gradient(336deg, rgba(3, 22, 9, 0.8), rgba(0, 0, 0, 0) 70.71%);
+    "
