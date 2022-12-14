@@ -13,7 +13,7 @@ import {
   useColorModeValue,
   Container,
 } from '@chakra-ui/react';
-import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+
 interface IBlogTags {
   tags: Array<string>;
   marginTop?: SpaceProps['marginTop'];

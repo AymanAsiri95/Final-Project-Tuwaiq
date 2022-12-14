@@ -34,7 +34,7 @@ export default function SplitScreen() {
               align={'start'}
               justify={'space-between'}>
             </Stack>
-            <Button    bgGradient='linear(to-r, teal.900, green.400)' variant={'solid'}
+            <Button  shadow="dark-lg"  bgGradient='linear(to-r, teal.900, green.400)' variant={'solid'}
             onClick={(e)=>{
               navigate('/Building')
             }}
