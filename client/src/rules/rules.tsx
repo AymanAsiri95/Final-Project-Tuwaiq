@@ -20,8 +20,10 @@ interface IBlogTags {
   marginTop?: SpaceProps['marginTop'];
 }
 
+
 const BlogTags: React.FC<IBlogTags> = (props) => {
   return (
+   
     <HStack spacing={2} marginTop={props.marginTop}>
       {props.tags.map((tag) => {
         return (
@@ -42,7 +44,7 @@ interface BlogAuthorProps {
 export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
   return (
     <HStack marginTop="2" spacing="2" display="flex" alignItems="center">
-
+  
       <Text fontWeight="medium">{props.name}</Text>
       <Text>—</Text>
       <Text>{props.date.toLocaleDateString()}</Text>
@@ -51,8 +53,11 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
 };
 
 const Rules = () => {
+     
   return (
+  
     <Container  maxW={'7xl'} p="12">
+
       <Box
       
         marginTop={{ base: '1', sm: '5' }}

@@ -34,8 +34,8 @@ function App() {
    
     {/* <NavbarScroller ={brand} links={links} /> */}
     
-    < Simple />
     
+    < Simple />
       <BrowserRouter>
        <Routes>
         <Route path="/" element={<Home/>}/>

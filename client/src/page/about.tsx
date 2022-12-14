@@ -52,6 +52,7 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
 const About = () => {
   return (
     <Container  maxW={'7xl'} p="12">
+       
       <Box
       
         marginTop={{ base: '1', sm: '5' }}

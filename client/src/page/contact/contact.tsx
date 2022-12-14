@@ -13,7 +13,6 @@ import {
   useColorModeValue,
   Container,
 } from '@chakra-ui/react';
-
 interface IBlogTags {
   tags: Array<string>;
   marginTop?: SpaceProps['marginTop'];
@@ -52,6 +51,7 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
 const Contact = () => {
   return (
     <Container  maxW={'7xl'} p="12">
+      
       <Box
       
         marginTop={{ base: '1', sm: '5' }}
